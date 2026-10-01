@@ -1,0 +1,191 @@
+{
+ "at": "2026-10-01T20:07:14.284837+00:00",
+ "n": 20,
+ "true_content": 20,
+ "liars": 0,
+ "honest_fail": 0,
+ "rows": [
+  {
+   "url": "https://example.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 713,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.python.org",
+   "ok": true,
+   "engine": "httpx",
+   "len": 52799,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://quotes.toscrape.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 11021,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://books.toscrape.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 51274,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://toscrape.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 3939,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": "",
+   "note": "page identique byte-à-byte au curl direct (3939 b) — signature de test erronée, corrigée"
+  },
+  {
+   "url": "https://www.iana.org",
+   "ok": true,
+   "engine": "httpx",
+   "len": 6251,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://openlibrary.org",
+   "ok": true,
+   "engine": "httpx",
+   "len": 106528,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.gutenberg.org",
+   "ok": true,
+   "engine": "httpx",
+   "len": 30405,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://news.ycombinator.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 34150,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://docs.python.org/3/",
+   "ok": true,
+   "engine": "httpx",
+   "len": 19636,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.crummy.com/software/BeautifulSoup/",
+   "ok": true,
+   "engine": "httpx",
+   "len": 10628,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://docs.scrapy.org/en/latest/",
+   "ok": true,
+   "engine": "httpx",
+   "len": 29692,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.selenium.dev",
+   "ok": true,
+   "engine": "httpx",
+   "len": 32400,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.playwright.dev",
+   "ok": true,
+   "engine": "httpx",
+   "len": 20691,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Web_scraping",
+   "ok": true,
+   "engine": "curl_cffi",
+   "len": 235513,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+   "ok": true,
+   "engine": "curl_cffi",
+   "len": 275847,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+   "ok": true,
+   "engine": "httpx",
+   "len": 222198,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+   "ok": true,
+   "engine": "httpx",
+   "len": 1184898,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://cheatsheets.zip",
+   "ok": true,
+   "engine": "httpx",
+   "len": 611659,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  },
+  {
+   "url": "https://explainshell.com",
+   "ok": true,
+   "engine": "httpx",
+   "len": 11428,
+   "sig_ok": true,
+   "verdict": "VRAI",
+   "err": ""
+  }
+ ],
+ "method_correction": "signature toscrape.com initiale \"to Scrape\" absente de la vraie page (titre réel = \"Scraping Sandbox\") ; vérifié par diff byte-à-byte vs curl → VRAI"
+}
