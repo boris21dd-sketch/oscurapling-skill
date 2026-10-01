@@ -1,0 +1,712 @@
+{
+ "at": "2026-10-01T20:28:14.618519+00:00",
+ "corpus": 20,
+ "tools": {
+  "oscurapling v3.3.4 (route auto)": {
+   "real_ok": 20,
+   "honest_fail": 0,
+   "liars": 0,
+   "wall_s": 12.3,
+   "dist": {
+    "n": 20,
+    "median": 260.8,
+    "p90": 663.7,
+    "p95": 1638.2,
+    "max": 5263.6,
+    "mean": 608.3
+   },
+   "per": [
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "len": 713,
+     "ms": 254.0,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.python.org",
+     "ok": true,
+     "len": 52821,
+     "ms": 63.2,
+     "engine": "httpx",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "len": 11021,
+     "ms": 370.2,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": true,
+     "len": 51274,
+     "ms": 495.8,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": true,
+     "len": 3939,
+     "ms": 380.1,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": true,
+     "len": 6251,
+     "ms": 75.3,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://openlibrary.org",
+     "ok": true,
+     "len": 106324,
+     "ms": 1638.2,
+     "engine": "httpx",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.gutenberg.org",
+     "ok": true,
+     "len": 30405,
+     "ms": 459.6,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": true,
+     "len": 33851,
+     "ms": 504.4,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.python.org/3/",
+     "ok": true,
+     "len": 19636,
+     "ms": 52.8,
+     "engine": "httpx",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.crummy.com/software/BeautifulSoup/",
+     "ok": true,
+     "len": 10628,
+     "ms": 663.7,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.scrapy.org/en/latest/",
+     "ok": true,
+     "len": 29692,
+     "ms": 201.7,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.selenium.dev",
+     "ok": true,
+     "len": 32400,
+     "ms": 205.4,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.playwright.dev",
+     "ok": true,
+     "len": 20691,
+     "ms": 5263.6,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Web_scraping",
+     "ok": true,
+     "len": 227049,
+     "ms": 224.7,
+     "engine": "curl_cffi",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+     "ok": true,
+     "len": 275847,
+     "ms": 625.6,
+     "engine": "curl_cffi",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+     "ok": true,
+     "len": 222198,
+     "ms": 72.0,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+     "ok": true,
+     "len": 1184898,
+     "ms": 267.5,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://cheatsheets.zip",
+     "ok": true,
+     "len": 611659,
+     "ms": 199.3,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://explainshell.com",
+     "ok": true,
+     "len": 11427,
+     "ms": 148.8,
+     "engine": "httpx",
+     "verdict": "VRAI"
+    }
+   ]
+  },
+  "agent-reach v1.5.0 (Jina Reader)": {
+   "real_ok": 19,
+   "honest_fail": 0,
+   "liars": 1,
+   "wall_s": 4.0,
+   "dist": {
+    "n": 20,
+    "median": 437.9,
+    "p90": 733.5,
+    "p95": 743.7,
+    "max": 3183.9,
+    "mean": 625.5
+   },
+   "per": [
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "len": 321,
+     "ms": 327.5,
+     "engine": "jina-reader",
+     "verdict": "MENTEUR",
+     "proof": "body=Test Document 321b; \"Example Domain\" absent; Warning cached snapshot"
+    },
+    {
+     "url": "https://www.python.org",
+     "ok": true,
+     "len": 20605,
+     "ms": 743.7,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "len": 1746,
+     "ms": 468.7,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": true,
+     "len": 8461,
+     "ms": 692.4,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": true,
+     "len": 1145,
+     "ms": 376.8,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": true,
+     "len": 1524,
+     "ms": 389.1,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://openlibrary.org",
+     "ok": true,
+     "len": 33705,
+     "ms": 548.0,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.gutenberg.org",
+     "ok": true,
+     "len": 3930,
+     "ms": 376.4,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": true,
+     "len": 16607,
+     "ms": 467.0,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.python.org/3/",
+     "ok": true,
+     "len": 7763,
+     "ms": 323.5,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.crummy.com/software/BeautifulSoup/",
+     "ok": true,
+     "len": 7724,
+     "ms": 408.7,
+     "engine": "jina-reader",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://docs.scrapy.org/en/latest/",
+     "ok": true,
+     "len": 9174,
+     "ms": 389.2,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.selenium.dev",
+     "ok": true,
+     "len": 3425,
+     "ms": 717.7,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.playwright.dev",
+     "ok": true,
+     "len": 3430,
+     "ms": 348.9,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Web_scraping",
+     "ok": true,
+     "len": 49630,
+     "ms": 733.5,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+     "ok": true,
+     "len": 42726,
+     "ms": 660.8,
+     "engine": "jina-reader",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+     "ok": true,
+     "len": 14656,
+     "ms": 398.7,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+     "ok": true,
+     "len": 757825,
+     "ms": 3183.9,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://cheatsheets.zip",
+     "ok": true,
+     "len": 19923,
+     "ms": 584.6,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://explainshell.com",
+     "ok": true,
+     "len": 1799,
+     "ms": 371.0,
+     "engine": "jina-reader",
+     "verdict": "VRAI"
+    }
+   ],
+   "stale_proof": "example.com → \"Test Document\" (contenu périmé, warning cached snapshot) 2 runs consécutifs"
+  },
+  "scrapling 0.4.15 (Fetcher+Stealth fb)": {
+   "real_ok": 20,
+   "honest_fail": 0,
+   "liars": 0,
+   "wall_s": 5.1,
+   "dist": {
+    "n": 20,
+    "median": 146.9,
+    "p90": 530.5,
+    "p95": 553.3,
+    "max": 676.6,
+    "mean": 248.6
+   },
+   "per": [
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "len": 713,
+     "ms": 67.3,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.python.org",
+     "ok": true,
+     "len": 52821,
+     "ms": 53.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "len": 11021,
+     "ms": 369.4,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": true,
+     "len": 51274,
+     "ms": 461.0,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": true,
+     "len": 3939,
+     "ms": 336.1,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": true,
+     "len": 6251,
+     "ms": 53.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://openlibrary.org",
+     "ok": true,
+     "len": 106323,
+     "ms": 676.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.gutenberg.org",
+     "ok": true,
+     "len": 30405,
+     "ms": 464.3,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": true,
+     "len": 33851,
+     "ms": 553.3,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.python.org/3/",
+     "ok": true,
+     "len": 19636,
+     "ms": 39.7,
+     "engine": "Fetcher",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.crummy.com/software/BeautifulSoup/",
+     "ok": true,
+     "len": 10628,
+     "ms": 530.5,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.scrapy.org/en/latest/",
+     "ok": true,
+     "len": 29692,
+     "ms": 95.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.selenium.dev",
+     "ok": true,
+     "len": 32400,
+     "ms": 39.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.playwright.dev",
+     "ok": true,
+     "len": 20691,
+     "ms": 80.6,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Web_scraping",
+     "ok": true,
+     "len": 235513,
+     "ms": 107.4,
+     "engine": "Fetcher",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+     "ok": true,
+     "len": 275847,
+     "ms": 336.8,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+     "ok": true,
+     "len": 222198,
+     "ms": 45.7,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+     "ok": true,
+     "len": 1184898,
+     "ms": 402.2,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://cheatsheets.zip",
+     "ok": true,
+     "len": 612020,
+     "ms": 186.4,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://explainshell.com",
+     "ok": true,
+     "len": 11127,
+     "ms": 72.5,
+     "engine": "Fetcher",
+     "verdict": "VRAI"
+    }
+   ]
+  },
+  "obscura CLI 0.2.3 (scrape natif)": {
+   "real_ok": 19,
+   "honest_fail": 1,
+   "liars": 0,
+   "wall_s": 33.7,
+   "dist": {
+    "n": 19,
+    "median": 840.2,
+    "p90": 1529.9,
+    "p95": 2866.7,
+    "max": 5512.0,
+    "mean": 1141.0
+   },
+   "per": [
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "len": 12348,
+     "ms": 160.6,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.python.org",
+     "ok": true,
+     "len": 53518,
+     "ms": 533.2,
+     "engine": "obscura",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "len": 10953,
+     "ms": 974.0,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": true,
+     "len": 50932,
+     "ms": 1507.9,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": true,
+     "len": 3934,
+     "ms": 927.4,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": true,
+     "len": 10412,
+     "ms": 425.2,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://openlibrary.org",
+     "ok": true,
+     "len": 102496,
+     "ms": 2866.7,
+     "engine": "obscura",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.gutenberg.org",
+     "ok": true,
+     "len": 30060,
+     "ms": 878.1,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": true,
+     "len": 33750,
+     "ms": 1392.6,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.python.org/3/",
+     "ok": true,
+     "len": 24135,
+     "ms": 185.1,
+     "engine": "obscura",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://www.crummy.com/software/BeautifulSoup/",
+     "ok": true,
+     "len": 10711,
+     "ms": 1529.9,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://docs.scrapy.org/en/latest/",
+     "ok": true,
+     "len": 30512,
+     "ms": 736.2,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.selenium.dev",
+     "ok": true,
+     "len": 33779,
+     "ms": 790.1,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.playwright.dev",
+     "ok": true,
+     "len": 21622,
+     "ms": 637.8,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Web_scraping",
+     "ok": true,
+     "len": 254509,
+     "ms": 465.6,
+     "engine": "obscura",
+     "verdict": "VRAI(sans-sig)"
+    },
+    {
+     "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+     "ok": false,
+     "len": 0,
+     "ms": 12014.9,
+     "engine": "obscura",
+     "verdict": "échec-honnête"
+    },
+    {
+     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+     "ok": true,
+     "len": 138834,
+     "ms": 231.5,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+     "ok": true,
+     "len": 1178785,
+     "ms": 840.2,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://cheatsheets.zip",
+     "ok": true,
+     "len": 615724,
+     "ms": 5512.0,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    },
+    {
+     "url": "https://explainshell.com",
+     "ok": true,
+     "len": 12489,
+     "ms": 1084.0,
+     "engine": "obscura",
+     "verdict": "VRAI"
+    }
+   ]
+  }
+ }
+}

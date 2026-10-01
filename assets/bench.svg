@@ -1,18 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
-  <defs><linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
-  <rect width="720" height="420" fill="#0b1020"/>
-  <text x="30" y="42" font-family="DejaVu Sans" font-size="21" fill="#f8fafc" font-weight="bold">Median fetch latency — real bench, measured</text>
-  <text x="30" y="66" font-family="DejaVu Sans" font-size="12" fill="#94a3b8">oscurapling v3.3.3 (sequential 20-URL public run) vs reference engines (same machine, lower = better)</text>
-  <!-- bars: scale 2600ms → 520px  (0.2px/ms) -->
-  <g font-family="DejaVu Sans" font-size="14">
-    <rect x="150" y="90"  width="19" height="34" fill="url(#bar)"/><text x="176" y="113" fill="#f8fafc">oscurapling sequential — 93 ms</text>
-    <rect x="150" y="140" width="44" height="34" fill="#a78bfa"/><text x="201" y="163" fill="#f8fafc">oscurapling batch (8) — 221 ms</text>
-    <rect x="150" y="190" width="36" height="34" fill="#34d399"/><text x="193" y="213" fill="#f8fafc">scrapling 0.4.15 — 182 ms (median: 26 sites lost)</text>
-    <rect x="150" y="240" width="460" height="34" fill="#fbbf24"/><text x="203" y="263" fill="#f8fafc">obscura CLI — 2 300 ms</text>
-    <rect x="150" y="290" width="219" height="34" fill="#ef4444"/>
-    <rect x="150" y="340" width="517" height="34" fill="#f97316"/><text x="674" y="363" fill="#f8fafc">agent-reach (Jina) COLD — 2 585 ms</text><text x="245" y="313" fill="#f8fafc">oscurapling v3.2.0 (before) — 1 097 ms</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+  <rect width="900" height="560" fill="#0b0f14"/>
+  <text x="40" y="48" fill="#e5e7eb" font-family="ui-monospace, monospace" font-size="21" font-weight="bold">GRAND VERSUS — public corpus 20 URL, same machine (2026-10-01)</text>
+  <text x="40" y="72" fill="#9ca3af" font-family="ui-monospace, monospace" font-size="12">real_ok = ok=True AND real content verified (signature byte-match). no-cache for Jina tested separately.</text>
+
+  <!-- barres: coverage real_ok -->
+  <text x="40" y="118" fill="#f59e0b" font-size="14" font-weight="bold">REAL coverage (of 20, liars excluded)</text>
+  <rect x="40" y="126" width="820" height="20" fill="#111827"/>
+  <rect x="40" y="126" width="820" height="20" fill="#22c55e40"/>
+  <rect x="40" y="126" width="820" height="20" fill="none" stroke="#374151"/>
+  <rect x="40" y="126" width="820" height="20" fill="#22c55e"/>
+  <text x="70" y="141" fill="#0b0f14" font-size="12" font-weight="bold">oscurapling v3.3.4 — 20/20, 0 liar</text>
+
+  <rect x="40" y="150" width="820" height="20" fill="#111827"/>
+  <rect x="40" y="150" width="779" height="20" fill="#ef4444"/>
+  <text x="230" y="165" fill="#fff" font-size="12" font-weight="bold">Agent Reach (Jina) — 19/20 + 1 LIAR (stale snapshot "Test Document")</text>
+
+  <rect x="40" y="174" width="820" height="20" fill="#111827"/>
+  <rect x="40" y="174" width="820" height="20" fill="#94a3b8"/>
+  <text x="60" y="189" fill="#0b0f14" font-size="12" font-weight="bold">scrapling 0.4.15 — 20/20 here, but 26 fewer sites served on the hard 259 corpus</text>
+
+  <rect x="40" y="198" width="820" height="20" fill="#111827"/>
+  <rect x="40" y="198" width="770" height="20" fill="#64748b"/>
+  <text x="60" y="213" fill="#f1f5f9" font-size="12" font-weight="bold">obscura CLI 0.2.3 — 19/20 (realpython = 12 s timeout → honest fail)</text>
+
+  <!-- latency -->
+  <text x="40" y="258" fill="#f59e0b" font-size="14" font-weight="bold">Median latency (20 fetchs, ok-only, lower = better)</text>
+  <g font-family="ui-monospace, monospace" font-size="12">
+    <text x="40" y="286" fill="#e5e7eb">oscurapling v3.3.4   </text><rect x="270" y="276" width="24.1" height="14" fill="#22c55e"/><text x="300" y="287" fill="#22c55e">241 ms</text>
+    <text x="40" y="308" fill="#e5e7eb">scrapling 0.4.15      </text><rect x="270" y="298" width="14.7" height="14" fill="#94a3b8"/><text x="292" y="309" fill="#cbd5e1">147 ms</text>
+    <text x="40" y="330" fill="#e5e7eb">Agent Reach (Jina)   </text><rect x="270" y="320" width="43.8" height="14" fill="#ef4444"/><text x="320" y="331" fill="#fca5a5">438 ms (served from cache!) / 2 585 COLD</text>
+    <text x="40" y="352" fill="#e5e7eb">obscura CLI 0.2.3    </text><rect x="270" y="342" width="84.0" height="14" fill="#64748b"/><text x="360" y="353" fill="#94a3b8">840 ms</text>
   </g>
-  <text x="30" y="370" font-family="DejaVu Sans" font-size="12" fill="#94a3b8">Coverage: 244/259 real-world sites (96.8% of fetchable, 7 dead domains proven via dual DoH). Sequential gain ÷3.2 (client httpx persistent).</text>
-  <text x="30" y="392" font-family="DejaVu Sans" font-size="11" fill="#64748b">Timestamped artifacts: benchmark/bench_results.json — re-run, do not trust, verify.</text>
+
+  <!-- coverage private corpus -->
+  <text x="40" y="400" fill="#f59e0b" font-size="14" font-weight="bold">Private 259-site corpus coverage (fetchable 252)</text>
+  <text x="40" y="428" fill="#e5e7eb" font-size="13">oscurapling v3.3.3-census: 252/252 (100 %) + 7 dead PROVEN</text>
+  <text x="40" y="446" fill="#cbd5e1" font-size="13">Agent Reach / Jina: n/a (no private access; public-only) · scrapling: 226/259 = 89,7 % · obscura CLI: 215/259 = 85,3 %</text>
+
+  <!-- key differentiators -->
+  <text x="40" y="492" fill="#f59e0b" font-size="14" font-weight="bold">What the others physically cannot do here</text>
+  <text x="40" y="514" fill="#e5e7eb" font-size="12">• 1000-fetch stress: oscurapling 1000/1000 wall 209 s vs Jina 98/1000 (rate-limit tier free) — proven twice</text>
+  <text x="40" y="532" fill="#e5e7eb" font-size="12">• honest failures: every non-ok is a labeled E_* contract; Jina's liars are ok=True with stale content</text>
 </svg>

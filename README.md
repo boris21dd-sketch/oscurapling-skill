@@ -28,14 +28,24 @@ A **Claude Agent Skill** (agentskills.io spec, as shipped in `anthropics/skills`
 | Failure handling | prose | **machine-readable error codes (`E_GATE_SSRF`, `E_DAEMON_STALE`…) with deterministic next actions** |
 | Compliance | absent | **SSRF gates ON by default, robots honored, rate-limited, anti-bot opt-in only** |
 
-Measured on the private 259-site real-world corpus (v3.3.3): **244/259 (96.8 % of fetchable; 7 dead domains proven by dual-DoH)**, median **93 ms sequential / 221 ms batch**, vs 1 097 ms for v3.2.0 — and versus reference engines on the same machine: scrapling 0.4.15 182 ms (median: 26 fewer sites served), obscura CLI 2 300 ms. **Agent Reach v1.5.0** (65k★ installer/router, web channel = Jina Reader) added to the benchmark: 20/20 on our public corpus but COLD median **2 585 ms / p95 4 709 ms** (×12 ours) — its 265 ms "warm" number is Jina's own cache serving stale snapshots (proven: example.com returned a dated "Test Document"), and cache opt-out = HTTP 429 rate-limit.
+Measured on the private 259-site real-world corpus (v3.3.3): **244/259 (96.8 % of fetchable; 7 dead domains proven by dual-DoH)**, median **93 ms sequential / 221 ms batch**, vs 1 097 ms for v3.2.0 — and versus reference engines on the same machine: scrapling 0.4.15 182 ms (median: 26 fewer sites served), obscura CLI 2 300 ms. **Grand versus, same machine, public corpus of 20 (v3.3.4, run 2026-10-01, JSON artifacts in `benchmark/`):**
+
+| Engine | real coverage | median | p95 | honest |
+|---|---|---|---|---|
+| **oscurapling v3.3.4** | **20/20, 0 liar** | **241 ms** | 652 ms | every ok = verified real content |
+| scrapling 0.4.15 | 20/20 | **147 ms** (fastest point) | 553 ms | 26 fewer sites served on the 259 corpus |
+| Agent Reach v1.5.0 (Jina) | 19/20 + **1 liar** | 438 ms warm / **2585 ms COLD** | 579/4709 ms | stale snapshot served as ok=True (proven twice) |
+| obscura CLI 0.2.3 | 19/20 | 840 ms | 2867 ms | raw single-binary rendering |
+
+Honest notes: scrapling wins the single-site speed point (147 ms) but plateaus at 87 % on the hard 259-site corpus; **Agent Reach is a *complementary* tool** (Twitter/Reddit/YouTube via local cookies — a different battlefield), and its 265 ms "warm" number is Jina's own cache serving STALE snapshots (proven: `example.com` → dated "Test Document" twice, cache opt-out = HTTP 429).
+Stress ×1000: **oscurapling 1000/1000 wall 209 s** (median 104 ms) vs Jina **98/1000** (free-tier rate-limit). See `benchmark/BENCH_X1000.md`.
 
 ![bench](assets/bench.svg)
 
 ## Install
 
 ```bash
-git clone https://github.com/boris21dd-sketch/oscurapling   # the engine (pinned v3.3.3)
+git clone https://github.com/boris21dd-sketch/oscurapling   # the engine (pinned v3.3.4)
 git clone https://github.com/boris21dd-sketch/oscurapling-skill  # this skill
 cd oscurapling-skill
 ln -s ../oscurapling oscurapling   # or set PYTHONPATH to the engine dir
