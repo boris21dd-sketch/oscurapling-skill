@@ -76,4 +76,11 @@ oscurapling-skill/
 
 MIT for the skill. The pinned engine (private repo `oscuraplingfull` v3.3.3) is referenced, not redistributed here.
 
+## Third-party notices & acknowledgment
+
+- [Scrapling](https://github.com/D4Vinci/Scrapling) — **BSD 3-Clause**, © 2024 Karim Shoair (D4Vinci). The engine imports it as a declared dependency (`scrapling==0.4.15`: `Adaptor`, `StealthyFetcher`) and its stealth-fetching design directly inspired the `scrapling-stealth` rung. Its license notice is preserved via the dependency declaration.
+- [Obscura](https://github.com/h4ckf0r0day/obscura) — **Apache License 2.0**, © h4ckf0r0day. The engine invokes the independently-installed binary (`--file`, `--dump markdown`, `--obey-robots`) as the CDP-grade rendering rung; its engineering directly inspired the daemon architecture.
+- Both projects' names and marks are used for description and attribution only (nominative fair use); **neither endorses this project** — see `DISCLAIMER.md` §7.
+- These notices satisfy their respective attribution requirements while the projects remain separate: this repository ships no copy of upstream source code, only imports/calls at their pinned versions.
+
 *Numbers change with networks — re-run the bench, do not trust READMEs, verify.*
