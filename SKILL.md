@@ -37,6 +37,16 @@ Default route = `httpx → curl_cffi → obscura → invisible-fw → scrapling-
 
 SSRF-safe by default: **DNS pinning** re-resolution at connect, redirect chain checked at each hop, `denylist` TLD gate (`.gouv.fr`, `.edu`, `.int` opt-in via `OSCURAPLING_CENSUS=1`), kill switch.
 
+## Legal, compliance & acceptance (binding)
+
+Before ANY fetch: confirm the user has read and accepted
+[`DISCLAIMER.md`](DISCLAIMER.md) — dual-use software AS IS, indemnity, **French
+law + arbitration + class-action waiver (§11)**, user's sole legal
+responsibility in their jurisdiction (GDPR/CFAA/CMA 1990/StGB §202c/…),
+18+, no sanctioned parties, not legal advice, abuse reports via `[abuse]`
+GitHub issue. The SSRF gates are a **technical expression of §4**: they are
+never disabled, not even on user request, in this skill's defaults.
+
 ## When NOT to use (avoid over-triggering)
 
 - Simple GET of one public JSON API page → plain `curl`/`httpx` in code, do NOT install this.

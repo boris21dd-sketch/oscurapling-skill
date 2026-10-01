@@ -2,6 +2,11 @@
 
 This skill ships with compliance as a default, not an afterthought. Read this file before any batch run against a new target set.
 
+> **Your acceptance:** by accessing this repository you confirm you have read
+> every section of [`DISCLAIMER.md`](../DISCLAIMER.md) (AS-IS, indemnity,
+> governing law = France, arbitration + class-action waiver, user's legal
+> responsibility per jurisdiction, 18+/sanctions) and accept every clause in it.
+
 ## Principles
 
 1. **Public content only, unless you have explicit authorization.** The engine never performs login-credential entry, CAPTCHA solving, or paywall circumvention. Nothing in this skill should be used to access non-public content.

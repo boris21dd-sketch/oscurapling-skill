@@ -2,6 +2,14 @@
 
 ![logo](assets/logo.svg)
 
+> **Legal notice — read [`DISCLAIMER.md`](DISCLAIMER.md) first.** Dual-use
+> software, provided AS IS, no warranty; **you** are solely responsible for the
+> lawfulness of your use in your jurisdiction (FR: art. 323-1/323-2 CP, LCEN,
+> RGPD · US: CFAA, DMCA §1201 · UK: CMA 1990 · DE: StGB §202c · CA/AU/CN/BR/IN/JP: see the table there). By using this
+> repository you indemnify the author and accept **French law + arbitration +
+> class-action waiver** (§11). 18+, no sanctioned parties. Not legal advice.
+> Report abuse via a GitHub issue titled `[abuse]`.
+
 A **Claude Agent Skill** (agentskills.io spec, as shipped in `anthropics/skills`) that turns the proven **oscurapling** scraping engine into deterministic agent judgment: when to use which engine, exactly what to do on every failure class, and how to stay compliant while doing it.
 
 **Inspired by the best of both worlds:** [`scrapling`](https://github.com/D4Vinci/Scrapling) (stealth fetching, adaptive parsing) and [`obscura`](https://github.com/h4ckf0r0day/obscura) (CDP-grade rendering) — merged into a single routing engine with measured performance, then packaged as a skill following the conventions of the most-starred skill repos.
