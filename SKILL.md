@@ -56,10 +56,16 @@ pip install -r requirements.txt
 **First run — the doctor** (mandatory before any batch. The doctor does NOT check network, it checks the ENGINE matrix and the gates):
 
 ```bash
-PYTHONPATH=oscurapling python -c "from opcli import app; app(args=['doctor'], standalone_mode=True)"
+PYTHONPATH=oscurapling python scripts/doctor.py
 ```
 
-Output codes: `OK` per engine. If `obscura` shows `binary absent` = Chrome/CDP unavailable, routes automatically cap at `curl_cffi` (a full 244/259→231/259 drop is EXPECTED and NOT an error).
+Then prove the failure contract on YOUR machine (3 negative evals, timestamped JSON):
+
+```bash
+PYTHONPATH=oscurapling python scripts/negative_evals.py
+```
+
+Output codes: `ready: true` per doctor check. If `chrome_cdp` shows `absent` = Chrome/CDP unavailable, routes automatically cap at `curl_cffi` (a full 244/259→231/259 drop is EXPECTED and NOT an error).
 
 ## Core commands (pinned machine-readable CLI)
 
