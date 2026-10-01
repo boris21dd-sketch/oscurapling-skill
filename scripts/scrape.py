@@ -37,6 +37,12 @@ def main(argv: list[str]) -> int:
     _setup_path()
     cmd, rest = argv[1], argv[2:]
 
+    # versioned clickwrap gate (quorum R2: browsewrap is unenforceable vs
+    # anonymous users — acceptance must be affirmative + traceable)
+    if cmd in ("fetch", "batch"):
+        from accept_terms import require
+        require()  # exit 3 + E_NO_ACCEPTANCE until recorded
+
     if cmd == "fetch" and rest:
         url = rest[0]
         engine = None

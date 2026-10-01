@@ -5,10 +5,15 @@
 > **Legal notice — read [`DISCLAIMER.md`](DISCLAIMER.md) first.** Dual-use
 > software, provided AS IS, no warranty; **you** are solely responsible for the
 > lawfulness of your use in your jurisdiction (FR: art. 323-1/323-2 CP, LCEN,
-> RGPD · US: CFAA, DMCA §1201 · UK: CMA 1990 · DE: StGB §202c · CA/AU/CN/BR/IN/JP: see the table there). By using this
-> repository you indemnify the author and accept **French law + arbitration +
-> class-action waiver** (§11). 18+, no sanctioned parties. Not legal advice.
-> Report abuse via a GitHub issue titled `[abuse]`.
+> RGPD · US: CFAA, DMCA §1201, CCPA/CPRA, **BIPA** ($1k-5k/violation, private
+> right of action), FTC §5, CAN-SPAM/TCPA — full table & honest limits in
+> **Appendix A**). By using this repository you indemnify the author, accept
+> **French law + arbitration + class-action waiver** (§11) and the
+> **no-inducement clause (§12)**. 18+, no sanctioned parties. Not legal advice.
+> Runtime enforcement: `scripts/accept_terms.py` requires an **affirmative,
+> versioned, hash-pinned `I ACCEPT`** before the first fetch (browsewrap is
+> unenforceable — the gate is not). Report abuse via a GitHub issue titled
+> `[abuse]`.
 
 A **Claude Agent Skill** (agentskills.io spec, as shipped in `anthropics/skills`) that turns the proven **oscurapling** scraping engine into deterministic agent judgment: when to use which engine, exactly what to do on every failure class, and how to stay compliant while doing it.
 

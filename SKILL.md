@@ -63,6 +63,18 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+**Before ANY fetch/batch** — the versioned clickwrap gate: the first
+`fetch`/`batch` without recorded acceptance exits **`E_NO_ACCEPTANCE` (3)**.
+Run once, interactively (the user types the acceptance, never the agent):
+
+```bash
+python scripts/accept_terms.py accept
+```
+
+Acceptance = `I ACCEPT` typed verbatim, stored versioned + sha256-pinned in
+`~/.oscurapling/acceptance.json`. A recorded acceptance against a modified
+`DISCLAIMER.md` no longer counts (re-hash mismatch → re-accept).
+
 **First run — the doctor** (mandatory before any batch. The doctor does NOT check network, it checks the ENGINE matrix and the gates):
 
 ```bash

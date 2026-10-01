@@ -116,6 +116,96 @@ is therefore a **maximum-reasonable protection, not magic**: combined with
 strongest non-lawyer shield available; nothing can make a private individual
 literally "unattackable" against a bad-faith actor's own legal costs.
 
+## Appendix A — United States — detailed notice (non-exhaustive; informative only)
+
+### A.1 — Computer fraud: CFAA (18 U.S.C. § 1030)
+"Access without authorization / exceeding authorized access." After *Van Buren
+v. United States*, 593 U.S. 374 (2021), fetching **publicly available** web
+pages generally falls outside CFAA's "gates-down" reading — but that comfort
+does NOT extend to: credential-protected or authenticated portions, systems
+behind technical access barriers, or **state** computer-crime statutes that may
+be broader (e.g., Cal. Penal Code § 502). Do not rely on *hiQ Labs v.
+LinkedIn*: the Ninth Circuit's CFAA holding was undercut by the 2022 jury
+verdict for LinkedIn on contract claims (case settled); **no US court has ever
+declared scraping "legal in general"** — anyone telling you otherwise is
+selling something.
+
+### A.2 — Anti-circumvention: DMCA § 1201 (17 U.S.C.)
+Circumventing an "effective technological measure" controlling access to a
+copyrighted work (login walls, obfuscation, sophisticated bot checks) is an
+independent violation, with **criminal** exposure where done for commercial
+advantage or private financial gain; triennial Library of Congress exemptions
+are narrow (security research, preservation, etc.). This skill's stealth
+engines present browser-grade fingerprints so that PUBLIC pages a normal
+browser can open are retrievable; **if a target's bot-wall is argued to be a
+§ 1201 TPM, the operator assumes that legal risk** — never the author.
+
+### A.3 — Intermediary defenses: do not overread § 230
+47 U.S.C. § 230 protects "interactive computer services" hosting third-party
+speech. A code author shipping a fetching tool **cannot safely rely on it**;
+this disclaimer makes no such claim.
+
+### A.4 — Privacy: federal & state (operator = "business")
+CCPA/CPRA (California), Virginia CDPA, Colorado CPA, Connecticut CTDPA, Utah
+UCPA, Washington My Health My Data, Nevada SB 370: scraped content containing
+residents' personal information can make the **operator** a "business" (or
+"service provider") with notice, deletion, opt-out ("sale"/"share" is broadly
+defined) and sensitive-data duties; penalties accrue **per violation**.
+**Illinois BIPA (740 ILCS 14/)**: biometric identifiers (faces, voiceprints)
+without written consent = **private right of action, $1,000-$5,000 statutory
+damages per violation** — the US class-action magnet; the engines never build
+biometric templates and operators must not either. **FTC Act § 5** (unfair or
+deceptive practices): misrepresenting identity/purpose to sites or data
+subjects, or repurposing scraped data contrary to posted notices, has fed
+multiple FTC consent decrees (data-broker line).
+
+### A.5 — IP contracts & related torts
+Copyright: fair use (17 U.S.C. § 107) is a **four-factor defense**, not a
+license — "it was public" ≠ right to republish (cf. *AP v. Meltwater*). Trade
+secrets: DTSA (18 U.S.C. § 1836) for marked/confidential material. Right of
+publicity (Cal. Civ. Code § 3344 + state torts) for names/likenesses.
+*Trespass to chattels*/server-burden theories (the *eBay v. Bidder's Edge*
+line) and **breach of the site's Terms of Service** (a contract claim
+independent of CFAA) remain live theories against aggressive scrapers.
+**CAN-SPAM (15 U.S.C. § 7704)** and **TCPA (47 U.S.C. § 227)**: harvesting
+emails/phone numbers to send unsolicited messages is a **PROHIBITED USE** of
+this software.
+
+### A.6 — Export controls & sanctions
+EAR/OFAC: providing the software to sanctioned persons or destinations, or for
+listed end-uses, may violate US law; §8 binds US users equally.
+
+### A.7 — Honest limits of this protection in the US (read twice)
+(i) A French governing-law/forum clause does **not** strip US courts of
+jurisdiction over US plaintiffs or US-targeted harm; it adds defense LAYERS
+(forum non conveniens, arbitration motion) — it is not a wall.
+(ii) Arbitration + class-action waivers bind US consumers only when embedded
+in a properly formed **clickwrap** (cf. *AT&T Mobility v. Concepcion*);
+browsewrap terms are routinely **not** enforced against anonymous GitHub users.
+(iii) § 230, the First Amendment (code-as-speech, *Bernstein v. DOJ*) and the
+dual-use doctrine (substantial non-infringing uses, the Sony/BetMax line) are
+real defenses — that cost real money to litigate. The only genuinely
+risk-minimizing strategy for a private author is layered: technical gates +
+kill switch + abuse channel + compliance-by-default + fast takedown response +
+**never marketing evasion**. This Appendix + §§1-11 is the maximum defensible
+stack for a non-lawyer; it is shield depth, not a guarantee.
+
+## 12. No inducement, no secondary liability (author-aiming theories)
+
+**Nothing in this repository, its documentation, its examples or its
+benchmarks constitutes encouragement, inducement, authorization, facilitation,
+or assistance toward any unlawful use.** The author does not control, direct,
+monitor or benefit from any user's fetches (no telemetry), and disclaims all
+derivative or secondary liability theories aimed at tool authors, including
+without limitation: inducement (*MGM Studios v. Grokster*), contributory and
+vicarious liability, aiding-and-abetting, civil conspiracy, tortious
+interference with third-party terms of service, and negligence-based
+oversight claims. The anti-bot engines exist to retrieve **public pages any
+ordinary browser can open**, the compliance defaults (robots, rate limits,
+breakers, SSRF gates, kill switch) are the author's **affirmative steps in the
+opposite direction**, marketing and documentation must never be read as
+inviting evasion, and any user quoting this repo as "permission" misquotes it.
+
 ---
 
 **Résumé (FR, non contractuel)** : logiciel à double usage fourni "en l'état",
@@ -123,4 +213,6 @@ sans garantie ; l'utilisateur est seul responsable de la légalité de son usage
 dans son pays (RGPD, CFAA, CMA 1990, §202c StGB…) ; il s'engage à indemniser
 l'auteur pour tout usage qu'il en ferait ; l'auteur n'est pas juriste — ceci
 n'est pas un avis juridique ; aucune affiliation avec Anthropic/Scrapling/
-Obscura ; usage interdit aux mineurs et parties sous sanctions.
+Obscura ; usage interdit aux mineurs et parties sous sanctions ; Annexe A = réglementation
+US détaillée (CFAA post-Van Buren, DMCA §1201, CCPA/CPRA, BIPA, FTC §5, CAN-SPAM/TCPA,
+limites honnêtes des protections aux USA).

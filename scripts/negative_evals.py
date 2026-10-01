@@ -24,6 +24,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SCRAPE = ROOT / "scripts" / "scrape.py"
 
+# The clickwrap gate (scripts/accept_terms.py) intercepts fetch/batch until an
+# affirmative I ACCEPT is recorded. Negative evals must run against a RECORDING
+# ISOLATED acceptance file, so the evals never write acceptance for a real user:
+import os
+os.environ["OSCURAPLING_ACCEPTANCE_FILE"] = "/tmp/.ocpl_neg_eval_acceptance.json"
+if not Path(os.environ["OSCURAPLING_ACCEPTANCE_FILE"]).exists():
+    Path(os.environ["OSCURAPLING_ACCEPTANCE_FILE"]).write_text(json.dumps({
+        "terms_version": "2.0",
+        "terms_sha256": __import__("hashlib").sha256(
+            (ROOT / "DISCLAIMER.md").read_bytes()).hexdigest(),
+        "accepted_at": datetime.now(timezone.utc).isoformat(),
+        "user": "negative-evals-sandbox", "method": "eval-sandbox"}))
+
 
 def run_scrape(args: list[str], timeout: float = 60.0) -> subprocess.CompletedProcess:
     return subprocess.run([sys.executable, str(SCRAPE)] + args,
