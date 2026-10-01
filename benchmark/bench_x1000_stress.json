@@ -1,0 +1,152 @@
+{
+ "axis": "stress_1000",
+ "at": "2026-10-01T19:55:55.737645+00:00",
+ "rounds": [
+  {
+   "round": 1,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 23.1
+  },
+  {
+   "round": 1,
+   "tool": "jina",
+   "ok": 21,
+   "wall_s": 4282.2
+  },
+  {
+   "round": 2,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 18.4
+  },
+  {
+   "round": 2,
+   "tool": "jina",
+   "ok": 8,
+   "wall_s": 4268.3
+  },
+  {
+   "round": 3,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 23.8
+  },
+  {
+   "round": 3,
+   "tool": "jina",
+   "ok": 9,
+   "wall_s": 4446.9
+  },
+  {
+   "round": 4,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 13.5
+  },
+  {
+   "round": 4,
+   "tool": "jina",
+   "ok": 6,
+   "wall_s": 4237.3
+  },
+  {
+   "round": 5,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 26.3
+  },
+  {
+   "round": 5,
+   "tool": "jina",
+   "ok": 10,
+   "wall_s": 5125.3
+  },
+  {
+   "round": 6,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 24.4
+  },
+  {
+   "round": 6,
+   "tool": "jina",
+   "ok": 10,
+   "wall_s": 4140.4
+  },
+  {
+   "round": 7,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 16.7
+  },
+  {
+   "round": 7,
+   "tool": "jina",
+   "ok": 7,
+   "wall_s": 4324.2
+  },
+  {
+   "round": 8,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 23.6
+  },
+  {
+   "round": 8,
+   "tool": "jina",
+   "ok": 10,
+   "wall_s": 4917.0
+  },
+  {
+   "round": 9,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 21.1
+  },
+  {
+   "round": 9,
+   "tool": "jina",
+   "ok": 9,
+   "wall_s": 4549.7
+  },
+  {
+   "round": 10,
+   "tool": "oscurapling",
+   "ok": 100,
+   "wall_s": 18.3
+  },
+  {
+   "round": 10,
+   "tool": "jina",
+   "ok": 8,
+   "wall_s": 4560.3
+  }
+ ],
+ "oscurapling": {
+  "total_ok": 1000,
+  "total": 1000,
+  "dist": {
+   "n": 1000,
+   "median": 104.2,
+   "p90": 1238.8,
+   "p95": 6532.3,
+   "max": 18307.6,
+   "mean": 895.5
+  },
+  "wall_total_s": 209.2
+ },
+ "jina": {
+  "total_ok": 98,
+  "total": 1000,
+  "dist": {
+   "n": 98,
+   "median": 420.3,
+   "p90": 564.0,
+   "p95": 703.3,
+   "max": 7566.8,
+   "mean": 686.2
+  },
+  "wall_total_s": 44851.6
+ }
+}

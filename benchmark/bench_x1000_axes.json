@@ -1,0 +1,1383 @@
+{
+ "freshness": {
+  "axis": "freshness",
+  "at": "2026-10-01T19:52:33.504133+00:00",
+  "local_counter": {
+   "jina": {
+    "url": "http://127.0.0.1:36193/counter",
+    "ok": false,
+    "ms": 255.0,
+    "bytes": 274,
+    "error": "429 rate",
+    "body_head": "{\"data\":null,\"path\":\"url\",\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Suspicious action: Request to localhost or non-public IP: 127.0.0.1\",\"readableMessage\":\"AbuseAlleviationEr"
+   },
+   "oscurapling": {
+    "ok": false,
+    "status": null,
+    "engine": "none",
+    "ms_text": 0.0,
+    "len": 0,
+    "text_head": "",
+    "ms_wall": 94.3,
+    "url": "http://127.0.0.1:36193/counter"
+   }
+  },
+  "worldtime_3fetch": {
+   "jina_unique_bodies": [
+    1,
+    [
+     "{\"data\":null,\"cause\":{\"log\":[\"  - navigating to \\\"https://worldtimeapi.org/api/t"
+    ]
+   ],
+   "oscurapling_unique_bodies": [
+    1,
+    [
+     ""
+    ]
+   ]
+  }
+ },
+ "authenticity": {
+  "axis": "authenticity",
+  "at": "2026-10-01T19:52:33.504255+00:00",
+  "rows": [
+   {
+    "url": "https://example.com",
+    "jina": {
+     "ok": true,
+     "auth": {
+      "Example Domain": false,
+      "illustrative": false
+     }
+    },
+    "oscurapling": {
+     "ok": true,
+     "auth": {
+      "Example Domain": true,
+      "illustrative": false
+     }
+    }
+   },
+   {
+    "url": "https://quotes.toscrape.com",
+    "jina": {
+     "ok": true,
+     "auth": {
+      "Quotes to Scrape": true,
+      "“The world as we have created it": true
+     }
+    },
+    "oscurapling": {
+     "ok": true,
+     "auth": {
+      "Quotes to Scrape": true,
+      "“The world as we have created it": false
+     }
+    }
+   },
+   {
+    "url": "https://books.toscrape.com",
+    "jina": {
+     "ok": true,
+     "auth": {
+      "Books to Scrape": true,
+      "Light in Weight": false
+     }
+    },
+    "oscurapling": {
+     "ok": true,
+     "auth": {
+      "Books to Scrape": false,
+      "Light in Weight": false
+     }
+    }
+   },
+   {
+    "url": "https://news.ycombinator.com",
+    "jina": {
+     "ok": true,
+     "auth": {
+      "Hacker News": true,
+      "New Links": false
+     }
+    },
+    "oscurapling": {
+     "ok": true,
+     "auth": {
+      "Hacker News": false,
+      "New Links": false
+     }
+    }
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Web_scraping",
+    "jina": {
+     "ok": true,
+     "auth": {
+      "Web scraping": true,
+      "Automated": false
+     }
+    },
+    "oscurapling": {
+     "ok": true,
+     "auth": {
+      "Web scraping": false,
+      "Automated": false
+     }
+    }
+   }
+  ]
+ },
+ "latency": {
+  "axis": "latency_distribution",
+  "at": "2026-10-01T19:53:35.780898+00:00",
+  "fetchs_each": 60,
+  "targets": [
+   "https://example.com",
+   "https://quotes.toscrape.com",
+   "https://books.toscrape.com",
+   "https://toscrape.com",
+   "https://news.ycombinator.com",
+   "https://www.iana.org"
+  ],
+  "n_each": 10,
+  "jina": {
+   "raw_ms": [
+    353.1,
+    468.0,
+    329.5,
+    305.5,
+    357.8,
+    320.8,
+    395.8,
+    407.1,
+    336.9,
+    329.1,
+    412.1,
+    428.7,
+    437.8,
+    574.9,
+    468.2,
+    471.2,
+    5343.0,
+    761.1,
+    374.0,
+    498.3,
+    279.9,
+    701.0,
+    277.6,
+    337.7,
+    297.3,
+    343.4,
+    283.8,
+    266.1,
+    289.9,
+    284.9,
+    388.2,
+    281.5,
+    300.2,
+    309.0,
+    265.9,
+    259.6,
+    258.6,
+    343.8,
+    276.3,
+    276.4,
+    317.7,
+    458.5,
+    287.9,
+    283.5,
+    270.4,
+    250.9,
+    272.4,
+    273.6,
+    254.8,
+    259.4,
+    268.6,
+    275.3,
+    375.7,
+    293.6,
+    286.7,
+    294.7,
+    290.7,
+    277.7,
+    289.6,
+    276.1
+   ],
+   "dist": {
+    "n": 60,
+    "min": 250.9,
+    "median": 298.8,
+    "p90": 468.2,
+    "p95": 574.9,
+    "p99": 761.1,
+    "max": 5343.0,
+    "mean": 425.9,
+    "stdev": 648.13
+   },
+   "ok": 24
+  },
+  "oscurapling": {
+   "raw_ms": [
+    320.6,
+    329.1,
+    329.3,
+    348.0,
+    1336.3,
+    292.1,
+    306.1,
+    283.0,
+    299.6,
+    350.2,
+    628.3,
+    611.4,
+    579.2,
+    610.1,
+    576.2,
+    567.9,
+    572.8,
+    585.0,
+    558.4,
+    596.4,
+    724.3,
+    794.7,
+    717.6,
+    655.5,
+    777.9,
+    727.2,
+    836.7,
+    679.5,
+    697.2,
+    705.3,
+    607.8,
+    622.7,
+    756.1,
+    706.0,
+    642.7,
+    576.5,
+    596.9,
+    574.0,
+    580.9,
+    598.4,
+    785.9,
+    755.7,
+    736.9,
+    806.8,
+    793.9,
+    755.7,
+    754.6,
+    811.5,
+    897.0,
+    779.9,
+    306.8,
+    323.3,
+    355.5,
+    310.2,
+    294.4,
+    312.0,
+    295.7,
+    330.0,
+    427.5,
+    305.6
+   ],
+   "dist": {
+    "n": 60,
+    "min": 283.0,
+    "median": 597.6,
+    "p90": 793.9,
+    "p95": 811.5,
+    "p99": 897.0,
+    "max": 1336.3,
+    "mean": 579.9,
+    "stdev": 209.08
+   },
+   "ok": 60
+  },
+  "raw_rows": {
+   "jina": [
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 353.1,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 468.0,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 329.5,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 305.5,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 357.8,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 320.8,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 395.8,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 407.1,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 336.9,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://example.com",
+     "ok": true,
+     "ms": 329.1,
+     "bytes": 321,
+     "error": "",
+     "body_head": "Title: Test Document\n\nURL Source: https://example.com/\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\n## Test Article\n\nThis is a test"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 412.1,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 428.7,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 437.8,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 574.9,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 468.2,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 471.2,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 5343.0,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 761.1,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 374.0,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://quotes.toscrape.com",
+     "ok": true,
+     "ms": 498.3,
+     "bytes": 1746,
+     "error": "",
+     "body_head": "Title: Quotes to Scrape\n\nURL Source: https://quotes.toscrape.com/\n\nMarkdown Content:\n“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 279.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:50.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": true,
+     "ms": 701.0,
+     "bytes": 8461,
+     "error": "",
+     "body_head": "Title: All products | Books to Scrape\n\nURL Source: https://books.toscrape.com/\n\nPublished Time: Wed, 08 Feb 2023 21:02:32 GMT\n\nMarkdown Content:\n**1000** results - showing **1** to **20**. \n**Warning!"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 277.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 337.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:53.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 297.3,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:53.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 343.4,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 283.8,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 266.1,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 289.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://books.toscrape.com",
+     "ok": false,
+     "ms": 284.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:53.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": true,
+     "ms": 388.2,
+     "bytes": 1145,
+     "error": "",
+     "body_head": "Title: Scraping Sandbox\n\nURL Source: https://toscrape.com/\n\nPublished Time: Wed, 08 Feb 2023 21:02:33 GMT\n\nMarkdown Content:\n## Quotes\n\n[A website](http://quotes.toscrape.com/) that lists quotes from "
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 281.5,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:56.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 300.2,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:56.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 309.0,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:56.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 265.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:56.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 259.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:56.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 258.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:56.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 343.8,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:56.686Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 276.3,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:56.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://toscrape.com",
+     "ok": false,
+     "ms": 276.4,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:56.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 317.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:56.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": true,
+     "ms": 458.5,
+     "bytes": 16628,
+     "error": "",
+     "body_head": "Title: Hacker News\n\nURL Source: https://news.ycombinator.com/\n\nMarkdown Content:\n[![Image 1](https://news.ycombinator.com/y18.svg)](https://news.ycombinator.com/)**[Hacker News](https://news.ycombinat"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 287.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:59.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 283.5,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:52:59.639Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 270.4,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 250.9,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 272.4,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 273.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:52:59.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 254.8,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:59.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://news.ycombinator.com",
+     "ok": false,
+     "ms": 259.4,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 268.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 275.3,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:52:59.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": true,
+     "ms": 375.7,
+     "bytes": 1524,
+     "error": "",
+     "body_head": "Title: Internet Assigned Numbers Authority\n\nURL Source: https://www.iana.org/\n\nPublished Time: Tue, 23 Jun 2026 02:06:19 GMT\n\nMarkdown Content:\nThe global coordination of the DNS Root, IP addressing, "
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 293.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:53:02.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 286.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:53:02.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 294.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":3,\"retryAfterDate\":\"2026-10-01T19:53:02.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 290.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:53:02.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 277.7,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:53:02.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 289.6,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":2,\"retryAfterDate\":\"2026-10-01T19:53:02.637Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    },
+    {
+     "url": "https://www.iana.org",
+     "ok": false,
+     "ms": 276.1,
+     "bytes": 242,
+     "error": "429 rate",
+     "body_head": "{\"data\":null,\"retryAfter\":1,\"retryAfterDate\":\"2026-10-01T19:53:02.638Z\",\"code\":429,\"name\":\"RateLimitTriggeredError\",\"status\":42903,\"message\":\"Per IP rate limit exceeded\",\"readableMessage\":\"RateLimitTr"
+    }
+   ],
+   "oscurapling": [
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 185.02717799856327,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 320.6,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 186.88133399700746,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 329.1,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 177.5813010171987,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 329.3,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 209.1359109908808,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 348.0,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 1212.533923011506,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 1336.3,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 168.50485702161677,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 292.1,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 168.31480100518093,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 306.1,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 156.99195698834956,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 283.0,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 170.04756099777296,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 299.6,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 212.39273599348962,
+     "len": 713,
+     "text_head": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme",
+     "ms_wall": 350.2,
+     "url": "https://example.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 470.6800799758639,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 628.3,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 468.7009089975618,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 611.4,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 453.1163199862931,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 579.2,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 456.70156899723224,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 610.1,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 437.5564439978916,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 576.2,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 440.6941769993864,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 567.9,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 436.1347689991817,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 572.8,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 437.5017010024749,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 585.0,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 435.5189540074207,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 558.4,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 452.42163000511937,
+     "len": 11021,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Quotes to Scrape</title>\n    <link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"/static/m",
+     "ms_wall": 596.4,
+     "url": "https://quotes.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 576.324093999574,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 724.3,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 554.1158679989167,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 794.7,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 582.5027180253528,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 717.6,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 525.5944459931925,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 655.5,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 654.0916149970144,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 777.9,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 554.3998219945934,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 727.2,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 665.9139769908506,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 836.7,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 541.1913779971655,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 679.5,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 549.4872830167878,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 697.2,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 580.3757749963552,
+     "len": 51274,
+     "text_head": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en-us\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if I",
+     "ms_wall": 705.3,
+     "url": "https://books.toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 463.14279999933206,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 607.8,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 472.70650800783187,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 622.7,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 598.8467290007975,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 756.1,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 469.7913240233902,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 706.0,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 479.345713974908,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 642.7,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 428.477107983781,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 576.5,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 456.5458870201837,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 596.9,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 431.5372240089346,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 574.0,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 437.2002690215595,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 580.9,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 439.6223890071269,
+     "len": 3939,
+     "text_head": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n        <title>Scraping Sandbox</title>\n        <link href=\"./css/bootstrap.min.",
+     "ms_wall": 598.4,
+     "url": "https://toscrape.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 646.11572099966,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 785.9,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 624.6081329882145,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 755.7,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 604.5445690106135,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 736.9,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 663.1267409829888,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 806.8,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 632.6160600001458,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 793.9,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 610.2887480228674,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 755.7,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 620.7714729825966,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 754.6,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 676.0864609968849,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 811.5,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 759.6277729899157,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 897.0,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 634.5214089960791,
+     "len": 34122,
+     "text_head": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"stylesheet\" type",
+     "ms_wall": 779.9,
+     "url": "https://news.ycombinator.com"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 175.09410800994374,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 306.8,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 187.40004798746668,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 323.3,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 222.29996099486016,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 355.5,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 178.5723739885725,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 310.2,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 163.0987050011754,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 294.4,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 180.72442201082595,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 312.0,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 159.38673599157482,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 295.7,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 179.85331299132667,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 330.0,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 283.76931499224156,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 427.5,
+     "url": "https://www.iana.org"
+    },
+    {
+     "ok": true,
+     "status": 200,
+     "engine": "httpx",
+     "ms_text": 167.07801399752498,
+     "len": 6251,
+     "text_head": "\n<!doctype html>\n<html>\n<head>\n\t<title>Internet Assigned Numbers Authority</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n\t<meta name=\"viewpo",
+     "ms_wall": 305.6,
+     "url": "https://www.iana.org"
+    }
+   ]
+  }
+ }
+}

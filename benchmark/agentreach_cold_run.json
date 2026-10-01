@@ -1,0 +1,150 @@
+{
+ "at": "2026-10-01T19:45:37.770502+00:00",
+ "engine": "agent-reach v1.5.0 web channel (Jina Reader COLD x-no-cache)",
+ "n": 20,
+ "ok": 20,
+ "median_ms": 2585.3,
+ "p95_ms": 4709.0,
+ "rows": [
+  {
+   "url": "https://example.com",
+   "ok": true,
+   "ms": 1213.3,
+   "bytes": 1548,
+   "error": ""
+  },
+  {
+   "url": "https://www.python.org",
+   "ok": true,
+   "ms": 2633.6,
+   "bytes": 20605,
+   "error": ""
+  },
+  {
+   "url": "https://quotes.toscrape.com",
+   "ok": true,
+   "ms": 1339.5,
+   "bytes": 1746,
+   "error": ""
+  },
+  {
+   "url": "https://books.toscrape.com",
+   "ok": true,
+   "ms": 1366.1,
+   "bytes": 8414,
+   "error": ""
+  },
+  {
+   "url": "https://toscrape.com",
+   "ok": true,
+   "ms": 1065.5,
+   "bytes": 1098,
+   "error": ""
+  },
+  {
+   "url": "https://www.iana.org",
+   "ok": true,
+   "ms": 1930.2,
+   "bytes": 1477,
+   "error": ""
+  },
+  {
+   "url": "https://openlibrary.org",
+   "ok": true,
+   "ms": 4709.0,
+   "bytes": 33705,
+   "error": ""
+  },
+  {
+   "url": "https://www.gutenberg.org",
+   "ok": true,
+   "ms": 1315.7,
+   "bytes": 3883,
+   "error": ""
+  },
+  {
+   "url": "https://news.ycombinator.com",
+   "ok": true,
+   "ms": 2830.2,
+   "bytes": 16553,
+   "error": ""
+  },
+  {
+   "url": "https://docs.python.org/3/",
+   "ok": true,
+   "ms": 1938.1,
+   "bytes": 7716,
+   "error": ""
+  },
+  {
+   "url": "https://www.crummy.com/software/BeautifulSoup/",
+   "ok": true,
+   "ms": 1732.9,
+   "bytes": 7677,
+   "error": ""
+  },
+  {
+   "url": "https://docs.scrapy.org/en/latest/",
+   "ok": true,
+   "ms": 2123.3,
+   "bytes": 9127,
+   "error": ""
+  },
+  {
+   "url": "https://www.selenium.dev",
+   "ok": true,
+   "ms": 2923.0,
+   "bytes": 3378,
+   "error": ""
+  },
+  {
+   "url": "https://www.playwright.dev",
+   "ok": true,
+   "ms": 2962.0,
+   "bytes": 3383,
+   "error": ""
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Web_scraping",
+   "ok": true,
+   "ms": 3103.3,
+   "bytes": 49238,
+   "error": ""
+  },
+  {
+   "url": "https://realpython.com/python-web-scraping-practical-introduction/",
+   "ok": true,
+   "ms": 4003.9,
+   "bytes": 42726,
+   "error": ""
+  },
+  {
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+   "ok": true,
+   "ms": 2585.3,
+   "bytes": 14609,
+   "error": ""
+  },
+  {
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+   "ok": true,
+   "ms": 6018.1,
+   "bytes": 449053,
+   "error": ""
+  },
+  {
+   "url": "https://cheatsheets.zip",
+   "ok": true,
+   "ms": 4262.4,
+   "bytes": 20197,
+   "error": ""
+  },
+  {
+   "url": "https://explainshell.com",
+   "ok": true,
+   "ms": 1583.2,
+   "bytes": 1799,
+   "error": ""
+  }
+ ]
+}
