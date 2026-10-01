@@ -1,0 +1,192 @@
+{
+ "schema": 1,
+ "engine_version": "3.3.3",
+ "run_at": "2026-10-01T17:22:05.448729+00:00",
+ "corpus": 20,
+ "ok": 20,
+ "median_ms": 771.4,
+ "p95_ms": 5187.0,
+ "wall_s": 7.3,
+ "rows": [
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 995.4,
+   "bytes": 713,
+   "error": "",
+   "url": "https://example.com"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 982.9,
+   "bytes": 52658,
+   "error": "",
+   "url": "https://www.python.org"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 1298.7,
+   "bytes": 11021,
+   "error": "",
+   "url": "https://quotes.toscrape.com"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 1399.1,
+   "bytes": 51274,
+   "error": "",
+   "url": "https://books.toscrape.com"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 1277.0,
+   "bytes": 3939,
+   "error": "",
+   "url": "https://toscrape.com"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 998.4,
+   "bytes": 6251,
+   "error": "",
+   "url": "https://www.iana.org"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 1602.4,
+   "bytes": 106593,
+   "error": "",
+   "url": "https://openlibrary.org"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 1307.0,
+   "bytes": 30429,
+   "error": "",
+   "url": "https://www.gutenberg.org"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 511.3,
+   "bytes": 34460,
+   "error": "",
+   "url": "https://news.ycombinator.com"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 38.5,
+   "bytes": 19636,
+   "error": "",
+   "url": "https://docs.python.org/3/"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 771.4,
+   "bytes": 10628,
+   "error": "",
+   "url": "https://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 225.6,
+   "bytes": 29692,
+   "error": "",
+   "url": "https://docs.scrapy.org/en/latest/"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 183.5,
+   "bytes": 32400,
+   "error": "",
+   "url": "https://www.selenium.dev"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 5187.0,
+   "bytes": 20691,
+   "error": "",
+   "url": "https://www.playwright.dev"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "curl_cffi",
+   "ms": 145.7,
+   "bytes": 227049,
+   "error": "",
+   "url": "https://en.wikipedia.org/wiki/Web_scraping"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "curl_cffi",
+   "ms": 532.6,
+   "bytes": 275847,
+   "error": "",
+   "url": "https://realpython.com/python-web-scraping-practical-introduction/"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 44.7,
+   "bytes": 222198,
+   "error": "",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 237.1,
+   "bytes": 1184898,
+   "error": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 145.6,
+   "bytes": 611659,
+   "error": "",
+   "url": "https://cheatsheets.zip"
+  },
+  {
+   "ok": true,
+   "status": 200,
+   "engine": "httpx",
+   "ms": 163.0,
+   "bytes": 11427,
+   "error": "",
+   "url": "https://explainshell.com"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+  <defs><linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+  <rect width="720" height="420" fill="#0b1020"/>
+  <text x="30" y="42" font-family="DejaVu Sans" font-size="21" fill="#f8fafc" font-weight="bold">Median fetch latency — real bench, measured</text>
+  <text x="30" y="66" font-family="DejaVu Sans" font-size="12" fill="#94a3b8">oscurapling v3.3.3 (sequential 20-URL public run) vs reference engines (same machine, lower = better)</text>
+  <!-- bars: scale 2600ms → 520px  (0.2px/ms) -->
+  <g font-family="DejaVu Sans" font-size="14">
+    <rect x="150" y="90"  width="19" height="34" fill="url(#bar)"/><text x="176" y="113" fill="#f8fafc">oscurapling sequential — 93 ms</text>
+    <rect x="150" y="140" width="44" height="34" fill="#a78bfa"/><text x="201" y="163" fill="#f8fafc">oscurapling batch (8) — 221 ms</text>
+    <rect x="150" y="190" width="36" height="34" fill="#34d399"/><text x="193" y="213" fill="#f8fafc">scrapling 0.4.15 — 182 ms (median: 26 sites lost)</text>
+    <rect x="150" y="240" width="460" height="34" fill="#fbbf24"/><text x="203" y="263" fill="#f8fafc">obscura CLI — 2 300 ms</text>
+    <rect x="150" y="290" width="219" height="34" fill="#ef4444"/><text x="245" y="313" fill="#f8fafc">oscurapling v3.2.0 (before) — 1 097 ms</text>
+  </g>
+  <text x="30" y="370" font-family="DejaVu Sans" font-size="12" fill="#94a3b8">Coverage: 244/259 real-world sites (96.8% of fetchable, 7 dead domains proven via dual DoH). Sequential gain ÷3.2 (client httpx persistent).</text>
+  <text x="30" y="392" font-family="DejaVu Sans" font-size="11" fill="#64748b">Timestamped artifacts: benchmark/bench_results.json — re-run, do not trust, verify.</text>
+</svg>
