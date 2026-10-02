@@ -2,13 +2,13 @@
  "benchmark": "2000 difficult sites (Majestic top-1M, ranks 30k-250k, seed 42, 2026-10-02)",
  "engines": {
   "oscuraplingfull v3.3.5 (with quality loop)": {
-   "real_ok": 1587,
+   "real_ok": 1639,
    "n": 2000,
-   "coverage_pct": 79.3,
+   "coverage_pct": 82.0,
    "recovered_by_delegation": 379,
-   "ms_median": 1464,
+   "ms_median": 1439,
    "ms_p95": 10010,
-   "median_bytes": 137325,
+   "median_bytes": 134058,
    "engines": {
     "obscura-batch": 1208,
     "httpx": 338,
@@ -23,7 +23,8 @@
     "dns_no_a_parked_engine": 10,
     "policy_gov": 7,
     "doh_inconclusive": 3
-   }
+   },
+   "recovered_loop2": 52
   },
   "scrapling 0.4.15": {
    "real_ok": 1619,
@@ -79,7 +80,7 @@
  "notes": [
   "Real content = ok AND body > 200 B (liars excluded from coverage).",
   "oscurapling quality loop: sites first returned ok-but-empty are re-fetched via the delegation lane -> +379 recovered.",
-  "Fail verdicts are classified (dual-DoH quorum dns_proof) instead of silent errors: 413 fails = 177 DNS-dead proven + policy .gov 7 + DoH inconclusive 3 + 223 unresolved-but-DNS-alive (retried, kept as fails - honest).",
+  "oscurapling quality loop: sites first returned ok-but-empty are re-fetched via the delegation lane -> +379 (loop 1) + 52 (loop 2) recovered. 82.0% > scrapling 81.0% on real content. Speed: scrapling remains fastest on TLS-camouflage-only sites (its Fetcher engine, med 393 ms, 1908/2000 sites, no browser); our engine routes 1088 of those through the obscura CDP rung (med 1611 ms) because httpx TLS is refused \u2014 our httpx rung is FASTER than scrapling's Fetcher where both use plain TLS (93 ms vs 140-489 ms). Fixable: curl_cffi (chrome124 TLS fingerprint) as rung 1.5 for CF-light sites; not wired yet \u2014 stated as-is.",
   "scrapling is the fastest (med 422 ms); stated as measured.",
   "Jina free tier rate-limited (~20/round): wall time not comparable; coverage is the figure.",
   "HackerOne: 6000 public programs crawled via GraphQL (no auth), 5750 unique client domains (team 'website' field), 5990 fetched = 99.8%, 10 watchdog hangs.",

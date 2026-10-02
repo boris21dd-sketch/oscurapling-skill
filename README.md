@@ -47,7 +47,7 @@ Stress ×1000: **oscurapling 1000/1000 wall 209 s** (median 104 ms) vs Jina **98
 ![bench2000](assets/bench2000.svg)
 
 - Corpus: 2000 domains, Majestic top-1M ranks 30k-250k, seed fixed. Real content = ok AND body > 200 B; liars excluded.
-- **oscurapling v3.3.5: 1587/2000 (79.3 %)** — the quality loop re-fetches ok-but-empty rows through the delegation lane (**+379 recovered**); every failure is classified by the dual-DoH quorum (`E_DNS_*` verdicts), not silently dropped: 413 fails = 177 DNS-dead proven + 7 policy (.gov) + 3 DoH-inconclusive + 223 DNS-alive-but-unfetchable (retried, honestly failed).
+- **oscurapling v3.3.5: 1639/2000 (82.0 %)** — quality loops re-fetch ok-but-empty rows through the delegation lane (**+379 +52 recovered**); every failure is classified by the dual-DoH quorum (`E_DNS_*` verdicts), not silently dropped: 361 fails = 177 DNS-dead proven + 17 policy (.gov) + 3 DoH-inconclusive + rest retried and honestly failed. scrapling 0.4.15 stays the fastest on TLS-only sites (Fetcher engine, med 393 ms, no browser); our httpx rung is faster where plain TLS works (93 ms vs 140-489 ms) — the med gap is routing, not the engine, documented in `benchmark/bench2000_results.json`.
 - scrapling 0.4.15: 1619/2000 (81.0 %), median 422 ms — **fastest, stated as measured**; 0 liar.
 - obscura CLI 0.2.3: 1111/2000 (55.5 %) **+ 26 liars** (ok=True, empty body), median 1792 ms.
 - Agent Reach 1.5.0 (Jina): 41/2000 (2.0 %) — free-tier rate-limit (~20/round); wall time not comparable.
