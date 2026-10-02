@@ -1,0 +1,89 @@
+{
+ "benchmark": "2000 difficult sites (Majestic top-1M, ranks 30k-250k, seed 42, 2026-10-02)",
+ "engines": {
+  "oscuraplingfull v3.3.5 (with quality loop)": {
+   "real_ok": 1587,
+   "n": 2000,
+   "coverage_pct": 79.3,
+   "recovered_by_delegation": 379,
+   "ms_median": 1464,
+   "ms_p95": 10010,
+   "median_bytes": 137325,
+   "engines": {
+    "obscura-batch": 1208,
+    "httpx": 338,
+    "curl_cffi": 31,
+    "obscura": 2,
+    "invisible-fw": 8
+   },
+   "fail_classification": {
+    "nxdomain_dual_doh_engine": 23,
+    "nxdomain_direct_probe": 107,
+    "dns_no_a_parked": 70,
+    "dns_no_a_parked_engine": 10,
+    "policy_gov": 7,
+    "doh_inconclusive": 3
+   }
+  },
+  "scrapling 0.4.15": {
+   "real_ok": 1619,
+   "liars": 0,
+   "coverage_pct": 81.0,
+   "wall_s": 649.2,
+   "median_bytes": 136656
+  },
+  "obscura CLI 0.2.3": {
+   "real_ok": 1111,
+   "liars": 26,
+   "honest_fail": 863,
+   "coverage_pct": 55.5,
+   "wall_s": 424.1,
+   "median_bytes": 123172
+  },
+  "Agent Reach v1.5.0 (Jina)": {
+   "real_ok": 41,
+   "liars": 0,
+   "coverage_pct": 2.0,
+   "wall_s": 94.6,
+   "median_bytes": 14095
+  }
+ },
+ "bug_bounty": {
+  "hackerone": {
+   "programs": 6000,
+   "sites_testes": 6000,
+   "real_ok": 5990,
+   "coverage_pct": 99.8,
+   "median_ms": 1178.8,
+   "p95_ms": 6594.2,
+   "median_bytes": 2298,
+   "engines": {
+    "httpx": 3735,
+    "obscura": 2173,
+    "invisible-fw": 48,
+    "curl_cffi": 27,
+    "scrapling-stealth": 7
+   },
+   "fails": {
+    "[Errno 9] Bad file descriptor": 5,
+    "": 5
+   },
+   "wall_s": 576.8
+  },
+  "bugcrowd": {
+   "programs": 291,
+   "briefs_ok_contenu": 113,
+   "spa_vides": 178
+  }
+ },
+ "notes": [
+  "Real content = ok AND body > 200 B (liars excluded from coverage).",
+  "oscurapling quality loop: sites first returned ok-but-empty are re-fetched via the delegation lane -> +379 recovered.",
+  "Fail verdicts are classified (dual-DoH quorum dns_proof) instead of silent errors: 413 fails = 177 DNS-dead proven + policy .gov 7 + DoH inconclusive 3 + 223 unresolved-but-DNS-alive (retried, kept as fails - honest).",
+  "scrapling is the fastest (med 422 ms); stated as measured.",
+  "Jina free tier rate-limited (~20/round): wall time not comparable; coverage is the figure.",
+  "HackerOne: 6000 public programs crawled via GraphQL (no auth), 5750 unique client domains (team 'website' field), 5990 fetched = 99.8%, 10 watchdog hangs.",
+  "Bugcrowd: 291 public engagements crawled; briefs render empty shell in headless CDP (anti-bot) = 178 counted as fail honestly; 113 real content.",
+  "Site verdicts per-domain exist in engine audit log only (private corpus never shipped)."
+ ]
+}

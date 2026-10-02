@@ -42,10 +42,22 @@ Stress ×1000: **oscurapling 1000/1000 wall 209 s** (median 104 ms) vs Jina **98
 
 ![bench](assets/bench.svg)
 
+### 2000 difficult sites + bug-bounty platform sweep (2026-10-02, engine v3.3.5)
+
+![bench2000](assets/bench2000.svg)
+
+- Corpus: 2000 domains, Majestic top-1M ranks 30k-250k, seed fixed. Real content = ok AND body > 200 B; liars excluded.
+- **oscurapling v3.3.5: 1587/2000 (79.3 %)** — the quality loop re-fetches ok-but-empty rows through the delegation lane (**+379 recovered**); every failure is classified by the dual-DoH quorum (`E_DNS_*` verdicts), not silently dropped: 413 fails = 177 DNS-dead proven + 7 policy (.gov) + 3 DoH-inconclusive + 223 DNS-alive-but-unfetchable (retried, honestly failed).
+- scrapling 0.4.15: 1619/2000 (81.0 %), median 422 ms — **fastest, stated as measured**; 0 liar.
+- obscura CLI 0.2.3: 1111/2000 (55.5 %) **+ 26 liars** (ok=True, empty body), median 1792 ms.
+- Agent Reach 1.5.0 (Jina): 41/2000 (2.0 %) — free-tier rate-limit (~20/round); wall time not comparable.
+- Bug-bounty sweep (v3.3.5): **HackerOne 6000 public programs** crawled via public GraphQL, 5750 unique client domains tested → **5990 = 99.8 %**, median 1179 ms, wall 577 s. **Bugcrowd 291 public engagements** → 113 real content; 178 briefs render an empty shell in headless CDP (anti-bot detection) and are counted as failures, honestly.
+- Raw aggregates: `benchmark/bench2000_results.json` (per-domain rows live in the engine audit log only — the private corpus is never shipped).
+
 ## Install
 
 ```bash
-git clone https://github.com/boris21dd-sketch/oscurapling   # the engine (pinned v3.3.4)
+git clone https://github.com/boris21dd-sketch/oscurapling   # the engine (pinned v3.3.5)
 git clone https://github.com/boris21dd-sketch/oscurapling-skill  # this skill
 cd oscurapling-skill
 ln -s ../oscurapling oscurapling   # or set PYTHONPATH to the engine dir
@@ -76,10 +88,12 @@ oscurapling-skill/
 │   └── compliant-use.md         # responsible scraping policy + injection defense
 ├── benchmark/
 │   ├── corpus_public.txt        # 20 permissive educational sites (NOT the private list)
-│   └── bench_results.json       # last public run artifact (timestamped)
+│   ├── bench_results.json       # last public run artifact (timestamped)
+│   └── bench2000_results.json   # 2000 difficult sites + bug-bounty sweep (aggregates only)
 └── assets/
     ├── logo.svg
-    └── bench.svg
+    ├── bench.svg
+    └── bench2000.svg
 ```
 
 ## License

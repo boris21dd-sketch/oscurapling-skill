@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="900" height="760" fill="#0d0f12"/>
+<text x="24" y="40" fill="#f5f5f5" font-size="21" font-weight="700">Bench 2000 difficult sites (Majestic 30k-250k, seed fixed)</text>
+<text x="24" y="61" fill="#9aa0a6" font-size="12">oscurapling v3.3.5 vs scrapling 0.4.15 vs obscura 0.2.3 vs Agent Reach 1.5.0 (Jina) - real content &gt;200 B - 02/10/2026</text>
+<g transform="translate(24,92)">
+<text x="0" y="12" fill="#f5f5f5" font-size="14" font-weight="600">oscurapling v3.3.5</text>
+<rect x="0" y="20" width="560" height="24" rx="4" fill="#cc0020"/>
+<text x="0" y="60" fill="#f5f5f5" font-size="12.5" font-weight="700">79.3% - 1587/2000 - med 1464 ms - med 137 kB</text>
+<text x="0" y="76" fill="#9aa0a6" font-size="10.5">quality loop: +379 recovered via delegation lanes - 413 fails classified (DNS dead/parked/policy verdicts)</text>
+</g>
+<g transform="translate(24,186)">
+<text x="0" y="12" fill="#f5f5f5" font-size="14" font-weight="600">scrapling 0.4.15</text>
+<rect x="0" y="20" width="572" height="24" rx="4" fill="#3b82f6"/>
+<text x="0" y="60" fill="#f5f5f5" font-size="12.5" font-weight="700">81.0% - 1619/2000 - med 422 ms (fastest) - 0 liar</text>
+</g>
+<g transform="translate(24,266)">
+<text x="0" y="12" fill="#f5f5f5" font-size="14" font-weight="600">obscura CLI 0.2.3</text>
+<rect x="0" y="20" width="392" height="24" rx="4" fill="#10b981"/>
+<text x="0" y="60" fill="#f5f5f5" font-size="12.5" font-weight="700">55.5% - 1111/2000 (+26 liars) - med 1792 ms</text>
+</g>
+<g transform="translate(24,346)">
+<text x="0" y="12" fill="#f5f5f5" font-size="14" font-weight="600">Agent Reach 1.5.0 (Jina free tier)</text>
+<rect x="0" y="20" width="16" height="24" rx="4" fill="#a855f7"/>
+<text x="0" y="60" fill="#f5f5f5" font-size="12.5" font-weight="700">2.0% - 41/2000 - med 4609 ms (rate-limit ~20/round; wall not comparable)</text>
+</g>
+<g transform="translate(24,430)">
+<rect x="-8" y="-10" width="860" height="180" rx="8" fill="#161a20"/>
+<text x="0" y="10" fill="#f5f5f5" font-size="16" font-weight="700">Bug bounty platforms - all client sites (oscurapling v3.3.5)</text>
+<text x="0" y="40" fill="#f5f5f5" font-size="13" font-weight="600">HackerOne</text>
+<rect x="110" y="30" width="680" height="15" rx="3" fill="#cc0020"/>
+<text x="126" y="42" fill="#ffffff" font-size="11" font-weight="700">99.8% - 5990/6000 - med 1179 ms - wall 577 s</text>
+<text x="0" y="70" fill="#f5f5f5" font-size="13" font-weight="600">Bugcrowd</text>
+<rect x="110" y="60" width="256" height="15" rx="3" fill="#f59e0b"/>
+<text x="126" y="72" fill="#ffffff" font-size="11" font-weight="700">38.8% - 113/291 (178 SPA anti-headless)</text>
+<text x="0" y="100" fill="#9aa0a6" font-size="11">6000 H1 programs crawled (public GraphQL) - 5750 unique client domains tested - Bugcrowd briefs render empty in headless CDP</text>
+<text x="0" y="118" fill="#9aa0a6" font-size="11">H1 engines: httpx 3735 - obscura CDP 2173 - invisible-fw 48 - curl_cffi 27 - scrapling-stealth 7 - 10 watchdog hangs</text>
+</g>
+<g transform="translate(24,640)">
+<text x="0" y="0" fill="#9aa0a6" font-size="11">Fail classification (2000 corpus, oscurapling): 413 fails = NXDOMAIN dual-DoH proven (23 engine + 107 direct)</text>
+<text x="0" y="13" fill="#9aa0a6" font-size="11">- no-A/parked (70+10) - policy .gov (7) - DoH inconclusive (3)</text>
+<text x="0" y="36" fill="#9aa0a6" font-size="11">v3.3.5: quorum dual-DoH (dns_proof) wired into Gate 3/3b - DNSResolvesRemote lane</text>
+<text x="0" y="49" fill="#9aa0a6" font-size="11">- resolve-override CURLOPT_RESOLVE=10203 - Gate 4 before Gate 3</text>
+<text x="0" y="66" fill="#9aa0a6" font-size="11">Methodology + raw JSON: benchmark/ (skill repo) - engine changelog: oscuraplingfull repo</text>
+</g>
+</svg>

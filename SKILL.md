@@ -179,6 +179,8 @@ PYTHONPATH=oscurapling python scripts/bench.py --corpus benchmark/corpus_public.
 
 The result JSON is written to `benchmark/bench_results.json`. Publish it with your issues if you want help debugging a regression — it will contain no personal data.
 
+Reference results (engine v3.3.5, 2026-10-02): 2000 difficult sites (Majestic 30k-250k) = **1587/2000 (79.3 %)** with a classification of every failure by the dual-DoH quorum; HackerOne 6000 public programs = 5990 client domains fetched (99.8 %); see `benchmark/bench2000_results.json` and `assets/bench2000.svg` for the aggregates.
+
 ## Environment requirements & scale
 
 - Python 3.11+, `pip install -r requirements.txt` in a venv.
